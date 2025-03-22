@@ -1,8 +1,6 @@
 /*** SQL Exercises - Questions based on fictitious HR database***/
 
 
-
-
 Table: employees
 +-------------+-------------+-------------+----------+--------------------+------------+------------+----------+----------------+------------+---------------+
 | EMPLOYEE_ID | FIRST_NAME  | LAST_NAME   | EMAIL    | PHONE_NUMBER       | HIRE_DATE  | JOB_ID     | SALARY   | COMMISSION_PCT | MANAGER_ID | DEPARTMENT_ID |
@@ -265,6 +263,14 @@ Table: job_grade
 
 
 /* 1. Write a query in SQL to display the first name, last name, department number, and department name for each employee. */
+
+SELECT e.first_name,
+       e.last_name,
+       e.department_id,
+       d.department_name
+  FROM employees e
+  INNER JOIN departments d
+    ON e.department_id = d.department_id;
 
 /* 2. Write a query in SQL to display the first and last name, department, city, and state province for each employee. */
 
