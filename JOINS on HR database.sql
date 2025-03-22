@@ -1,4 +1,4 @@
-/*** SQL Exercises - Questions based on fictitious HR database***/
+/*** SQL Exercises - JOINS Questions based on fictitious HR database***/
 
 
 Table: employees
