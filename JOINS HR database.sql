@@ -274,7 +274,26 @@ SELECT e.first_name,
 
 /* 2. Write a query in SQL to display the first and last name, department, city, and state province for each employee. */
 
+SELECT e.first_name,
+       e.last_name,
+       d.department_name,
+       l.city,
+       l.state_province
+  FROM employees e
+  INNER JOIN departments d
+    ON e.department_id = d.department_id
+  INNER JOIN locations l
+    ON d.location_id = l.location_id;
+
 /* 3. Write a query in SQL to display the first name, last name, salary, and job grade for all employees. */
+
+SELECT e.first_name,
+       e.last_name,
+       e.salary,
+       j.grade_level
+  FROM employees e
+  INNER JOIN job_grades j
+    ON e.salary BETWEEN j.lowest_sal AND j.highest_sal;
 
 /* 4. Write a query in SQL to display the first name, last name, department number and department name, for all employees for departments 80 or 40. */
 
